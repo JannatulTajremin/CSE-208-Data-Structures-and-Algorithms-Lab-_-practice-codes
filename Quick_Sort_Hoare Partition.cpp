@@ -15,6 +15,9 @@ int partition(int arr[],int low,int high){
        while(too_small>=low && arr[too_small]>arr[pivot]){
            --too_small;
        }
+       // If the pointers have not crossed, swap the misplaced elements
+// so that the smaller element goes to the left
+// and the larger element goes to the right.
        if(too_big<too_small){
            swap(arr[too_big],arr[too_small]);
        }
@@ -23,7 +26,7 @@ int partition(int arr[],int low,int high){
    return too_small;
 }
 void quicksort(int arr[],int low,int high){
-    //checking for 0 to n-1 
+    // Continue sorting only if the current subarray has at least 2 elements 
     if(low<high){
         // p = pivot's correct position
         int p = partition(arr,low,high);
