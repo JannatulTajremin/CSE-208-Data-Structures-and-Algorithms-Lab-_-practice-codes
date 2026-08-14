@@ -4,6 +4,10 @@ void merge(int left[],int right[],int leftsize,int rightsize,int arr[],int n){
     int i=0,j=0,k=0;
     while(i<leftsize&&j<rightsize){
         if(left[i]<=right[j]){
+            
+            //for descending order sorting 
+            //if(left[i]>=right[j])
+            
             arr[k]=left[i];
             i++;
         }
