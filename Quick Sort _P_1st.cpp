@@ -7,7 +7,7 @@ int partition(int a[],int low,int high){
     while(i<=j){
         while(i<=high && a[i]<=a[pivot])
         i++;
-        while(j>=low && a[j]>a[pivot])
+        while(j>low && a[j]>a[pivot])
         j--;
         if(i<j)
         swap(a[i],a[j]);
