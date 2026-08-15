@@ -7,8 +7,16 @@ int partition(int a[],int low,int high){
     while(i<=j){
         while(i<=high && a[i]<=a[pivot])
         i++;
+        
+        //for descending order sorting 
+        //while(i<=high && a[i]>=a[pivot])
+        
         while(j>low && a[j]>a[pivot])
         j--;
+        
+        //for descending order sorting 
+        //while(j>low && a[j]<a[pivot])
+        
         if(i<j)
         swap(a[i],a[j]);
     }
