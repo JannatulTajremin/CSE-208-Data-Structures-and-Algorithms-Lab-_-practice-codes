@@ -30,7 +30,8 @@ void merge(int left[],int right[],int leftsize,int rightsize,int arr[],int n){
 }
 void dividearray(int arr[],int n){
     // set base case = 1
-    if(n == 1)
+    //n<1 means n==0 for empty array
+    if(n <= 1)
     return;
     // size of left & right array
     int leftsize =n/2;
