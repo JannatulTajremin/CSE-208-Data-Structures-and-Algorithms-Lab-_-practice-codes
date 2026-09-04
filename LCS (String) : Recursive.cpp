@@ -20,7 +20,10 @@ string LCS(string A, string B, int i, int j)
         string x = LCS(A, B, i+1, j);
         string y = LCS(A, B, i, j+1);
 
-        return (x.size() > y.size()) ? x : y;
+        if(x.size() > y.size())
+        return x;
+        else
+        return y;
     }
 }
 
